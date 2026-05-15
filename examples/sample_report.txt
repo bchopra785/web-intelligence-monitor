@@ -1,0 +1,123 @@
+Web Intelligence Monitor - Sample Measurement Report
+====================================================
+
+Generated: 2026-05-15
+Dataset: Curated ecommerce-focused website set
+Purpose: Portfolio sample output for GitHub submission
+
+EXECUTIVE SUMMARY
+------------------
+Total Websites Measured: 50
+Total Measurements: 51
+Overall Success Rate: 90.2%
+Average Load Time: 1942ms
+Successful Measures: 46/51
+Failed Measures: 5
+
+This run shows a mostly healthy ecommerce measurement dataset with a few intentionally retained blocked or edge-case sites for research completeness.
+
+OVERALL OBSERVATIONS
+--------------------
+- Most ecommerce sites in the dataset load successfully.
+- Fashion, resale, and electronics categories performed especially well.
+- Luxury retail had the highest average load times and produced the main performance outliers.
+- International and general ecommerce categories contained the blocked or failed access cases.
+
+CATEGORY SUMMARY
+----------------
+Ecommerce-Resale
+- Success Rate: 100.0%
+- Mean Load Time: 164ms
+
+Ecommerce-Furniture
+- Success Rate: 100.0%
+- Mean Load Time: 508ms
+
+Ecommerce-Electronics
+- Success Rate: 100.0%
+- Mean Load Time: 537ms
+
+Ecommerce-Fashion
+- Success Rate: 100.0%
+- Mean Load Time: 592ms
+
+Ecommerce-Specialty
+- Success Rate: 100.0%
+- Mean Load Time: 1666ms
+
+Ecommerce-Luxury
+- Success Rate: 100.0%
+- Mean Load Time: 7869ms
+
+Ecommerce-International
+- Success Rate: 88.9%
+- Mean Load Time: 1851ms
+
+Ecommerce-General
+- Success Rate: 83.3%
+- Mean Load Time: 1480ms
+
+Edge-Case
+- Success Rate: 0.0%
+- Mean Load Time: 0ms
+
+TOP PERFORMERS
+--------------
+1. The RealReal - 97.7/100
+   URL: https://www.therealreal.com
+   Mean Load Time: 151ms
+
+2. Sephora - 97.7/100
+   URL: https://www.sephora.com
+   Mean Load Time: 151ms
+
+3. Depop - 97.7/100
+   URL: https://www.depop.com
+   Mean Load Time: 157ms
+
+4. ASOS - 97.6/100
+   URL: https://www.asos.com
+   Mean Load Time: 161ms
+
+5. Adorama - 97.5/100
+   URL: https://www.adorama.com
+   Mean Load Time: 168ms
+
+RISK FLAGS / OUTLIERS
+---------------------
+- Farfetch: 20789ms, z-score 4.57
+- Farfetch: 17481ms, z-score 3.77
+- Best Buy: 10271ms, z-score 2.02
+
+BLOCKED / FAILED ACCESS CASES
+-----------------------------
+These sites are intentionally retained in the dataset to document access restrictions, HTTP behavior, or automation-blocking patterns.
+
+- HTTP Status - 200 OK
+  URL: https://httpstat.us/200
+  Error Type: ssl_error
+  Details: SSL/TLS error: Page.goto: net::ERR_EMPTY_RESPONSE at https://httpstat.us/200
+
+- HTTP Status - 404 Not Found
+  URL: https://httpstat.us/404
+  Error Type: ssl_error
+  Details: SSL/TLS error: Page.goto: net::ERR_EMPTY_RESPONSE at https://httpstat.us/404
+
+- HTTP Status - 500 Server Error
+  URL: https://httpstat.us/500
+  Error Type: ssl_error
+  Details: SSL/TLS error: Page.goto: net::ERR_EMPTY_RESPONSE at https://httpstat.us/500
+
+- Noon
+  URL: https://www.noon.com
+  Error Type: ssl_error
+  Details: SSL/TLS error: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.noon.com/
+
+- Costco
+  URL: https://www.costco.com
+  Error Type: ssl_error
+  Details: SSL/TLS error: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.costco.com/
+
+CONCLUSION
+----------
+This project demonstrates a reproducible, research-style web measurement pipeline focused on ecommerce performance and reliability. The report is intentionally structured for portfolio review and highlights both strong performers and real-world failure cases.

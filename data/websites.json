@@ -1,0 +1,259 @@
+{
+  "websites": [
+    {
+      "url": "https://www.amazon.com",
+      "name": "Amazon",
+      "category": "ecommerce-general"
+    },
+    {
+      "url": "https://www.ebay.com",
+      "name": "eBay",
+      "category": "ecommerce-general"
+    },
+    {
+      "url": "https://www.walmart.com",
+      "name": "Walmart",
+      "category": "ecommerce-general"
+    },
+    {
+      "url": "https://www.target.com",
+      "name": "Target",
+      "category": "ecommerce-general"
+    },
+    {
+      "url": "https://www.costco.com",
+      "name": "Costco",
+      "category": "ecommerce-general"
+    },
+    {
+      "url": "https://www.alibaba.com",
+      "name": "Alibaba",
+      "category": "ecommerce-general"
+    },
+    {
+      "url": "https://www.asos.com",
+      "name": "ASOS",
+      "category": "ecommerce-fashion"
+    },
+    {
+      "url": "https://www.shein.com",
+      "name": "Shein",
+      "category": "ecommerce-fashion"
+    },
+    {
+      "url": "https://www.hm.com",
+      "name": "H&M",
+      "category": "ecommerce-fashion"
+    },
+    {
+      "url": "https://www.zara.com",
+      "name": "Zara",
+      "category": "ecommerce-fashion"
+    },
+    {
+      "url": "https://www.forever21.com",
+      "name": "Forever 21",
+      "category": "ecommerce-fashion"
+    },
+    {
+      "url": "https://www.uniqlo.com",
+      "name": "Uniqlo",
+      "category": "ecommerce-fashion"
+    },
+    {
+      "url": "https://www.gap.com",
+      "name": "Gap",
+      "category": "ecommerce-fashion"
+    },
+    {
+      "url": "https://www.nordstrom.com",
+      "name": "Nordstrom",
+      "category": "ecommerce-luxury"
+    },
+    {
+      "url": "https://www.saksfifthavenue.com",
+      "name": "Saks Fifth Avenue",
+      "category": "ecommerce-luxury"
+    },
+    {
+      "url": "https://www.ssense.com",
+      "name": "SSENSE",
+      "category": "ecommerce-luxury"
+    },
+    {
+      "url": "https://www.farfetch.com",
+      "name": "Farfetch",
+      "category": "ecommerce-luxury"
+    },
+    {
+      "url": "https://www.etsy.com",
+      "name": "Etsy",
+      "category": "ecommerce-specialty"
+    },
+    {
+      "url": "https://www.wayfair.com",
+      "name": "Wayfair",
+      "category": "ecommerce-specialty"
+    },
+    {
+      "url": "https://www.wish.com",
+      "name": "Wish",
+      "category": "ecommerce-specialty"
+    },
+    {
+      "url": "https://www.zappos.com",
+      "name": "Zappos",
+      "category": "ecommerce-specialty"
+    },
+    {
+      "url": "https://www.ulta.com",
+      "name": "Ulta Beauty",
+      "category": "ecommerce-specialty"
+    },
+    {
+      "url": "https://www.sephora.com",
+      "name": "Sephora",
+      "category": "ecommerce-specialty"
+    },
+    {
+      "url": "https://www.gamestop.com",
+      "name": "GameStop",
+      "category": "ecommerce-specialty"
+    },
+    {
+      "url": "https://www.newegg.com",
+      "name": "Newegg",
+      "category": "ecommerce-specialty"
+    },
+    {
+      "url": "https://www.chewy.com",
+      "name": "Chewy",
+      "category": "ecommerce-specialty"
+    },
+    {
+      "url": "https://www.bestbuy.com",
+      "name": "Best Buy",
+      "category": "ecommerce-specialty"
+    },
+    {
+      "url": "https://www.homedepot.com",
+      "name": "Home Depot",
+      "category": "ecommerce-specialty"
+    },
+    {
+      "url": "https://www.lowes.com",
+      "name": "Lowe's",
+      "category": "ecommerce-specialty"
+    },
+    {
+      "url": "https://www.depop.com",
+      "name": "Depop",
+      "category": "ecommerce-resale"
+    },
+    {
+      "url": "https://www.vestiairecollective.com",
+      "name": "Vestiaire Collective",
+      "category": "ecommerce-resale"
+    },
+    {
+      "url": "https://www.therealreal.com",
+      "name": "The RealReal",
+      "category": "ecommerce-resale"
+    },
+    {
+      "url": "https://www.apple.com",
+      "name": "Apple Store",
+      "category": "ecommerce-electronics"
+    },
+    {
+      "url": "https://www.bhphotovideo.com",
+      "name": "B&H Photo Video",
+      "category": "ecommerce-electronics"
+    },
+    {
+      "url": "https://www.adorama.com",
+      "name": "Adorama",
+      "category": "ecommerce-electronics"
+    },
+    {
+      "url": "https://www.article.com",
+      "name": "Article",
+      "category": "ecommerce-furniture"
+    },
+    {
+      "url": "https://www.westelm.com",
+      "name": "West Elm",
+      "category": "ecommerce-furniture"
+    },
+    {
+      "url": "https://www.castlery.com",
+      "name": "Castlery",
+      "category": "ecommerce-furniture"
+    },
+    {
+      "url": "https://www.aliexpress.com",
+      "name": "AliExpress",
+      "category": "ecommerce-international"
+    },
+    {
+      "url": "https://www.flipkart.com",
+      "name": "Flipkart",
+      "category": "ecommerce-international"
+    },
+    {
+      "url": "https://www.lazada.com",
+      "name": "Lazada",
+      "category": "ecommerce-international"
+    },
+    {
+      "url": "https://www.shopee.sg",
+      "name": "Shopee",
+      "category": "ecommerce-international"
+    },
+    {
+      "url": "https://www.mercadolibre.com",
+      "name": "Mercado Libre",
+      "category": "ecommerce-international"
+    },
+    {
+      "url": "https://www.jumia.com.ng",
+      "name": "Jumia",
+      "category": "ecommerce-international"
+    },
+    {
+      "url": "https://www.noon.com",
+      "name": "Noon",
+      "category": "ecommerce-international"
+    },
+    {
+      "url": "https://www.souq.com",
+      "name": "Souq",
+      "category": "ecommerce-international"
+    },
+    {
+      "url": "https://www.ozon.ru",
+      "name": "Ozon",
+      "category": "ecommerce-international"
+    },
+    {
+      "url": "https://www.farfetch.com",
+      "name": "Farfetch",
+      "category": "ecommerce-luxury"
+    },
+    {
+      "url": "https://httpstat.us/200",
+      "name": "HTTP Status - 200 OK",
+      "category": "edge-case"
+    },
+    {
+      "url": "https://httpstat.us/404",
+      "name": "HTTP Status - 404 Not Found",
+      "category": "edge-case"
+    },
+    {
+      "url": "https://httpstat.us/500",
+      "name": "HTTP Status - 500 Server Error",
+      "category": "edge-case"
+    }
+  ]
+}
