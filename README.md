@@ -71,6 +71,17 @@ For the GitHub portfolio version, one polished sample report is kept here:
 
 - `examples/sample_report.txt`
 
+### 3. Run with Docker (Optional)
+
+Build and run the project in a containerized environment:
+
+```bash
+docker build -t web-intelligence-monitor .
+docker run -v $(pwd)/data/processed:/app/data/processed web-intelligence-monitor
+```
+
+The Docker image includes all dependencies and Playwright browsers pre-installed.
+
 ### Output Locations
 
 After running, check:
@@ -201,22 +212,27 @@ TOP 10 PERFORMING WEBSITES
 Run unit tests for metrics and scoring logic:
 
 ```bash
-python -m pytest tests/test_metrics.py -v
+python -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
-Or with unittest:
+Tests are organized into focused modules:
+- `test_metrics.py`: Load time scoring and performance tiers
+- `test_error_handling.py`: Error classification logic
+- `test_statistics.py`: Statistical aggregation and outlier detection
+- `test_report_generator.py`: Report generation sections
 
-```bash
-python -m unittest tests.test_metrics -v
-```
-
-Tests cover:
+Coverage includes:
 - Load time scoring algorithms
 - Performance tier classification
 - Consistency calculations
 - Percentile computations
 - Reliability tier classification
 - Error classification logic
+- Statistical analysis and aggregation
+
+### Continuous Integration
+
+Tests run automatically on every push via GitHub Actions. Check the workflow status in the Actions tab.
 
 ## Portfolio Readiness
 
@@ -226,6 +242,8 @@ This repository is structured to be profile-ready:
 - Generated measurement outputs stay local and out of Git
 - One curated sample report is included for reviewers
 - The README matches the current ecommerce-focused dataset and workflow
+- Docker support for reproducible containerized execution
+- Automated test suite with GitHub Actions CI/CD pipeline
 
 ## Key Features
 
