@@ -15,6 +15,7 @@ import logging
 from crawler import BrowserAutomation, WebsiteSession
 from analysis.statistics import StatisticsAnalyzer
 from report.generator import ReportGenerator
+from storage import SQLiteStore
 
 # Setup logging
 logging.basicConfig(
@@ -33,6 +34,7 @@ class WebIntelligenceMonitor:
         self.raw_dir = self.data_dir / "raw"
         self.processed_dir = self.data_dir / "processed"
         self.websites_file = self.data_dir / "websites.json"
+        self.database_path = self.processed_dir / "web_intelligence_monitor.db"
         
         # Create directories if they don't exist
         self.raw_dir.mkdir(parents=True, exist_ok=True)
@@ -208,6 +210,23 @@ class WebIntelligenceMonitor:
         print("=" * 80 + "\n")
         
         return str(report_path)
+
+    def save_sqlite_results(self, metrics_list: list, analysis: dict, analysis_path: str, report_path: str) -> str:
+        """Persist the latest pipeline run into SQLite."""
+        store = SQLiteStore(self.database_path)
+        try:
+            store.save_pipeline_run(
+                run_timestamp=self.timestamp,
+                metrics_list=metrics_list,
+                analysis_results=analysis,
+                analysis_path=analysis_path,
+                report_path=report_path,
+            )
+        finally:
+            store.close()
+
+        logger.info(f"SQLite database updated: {self.database_path}")
+        return str(self.database_path)
     
     @staticmethod
     def _make_serializable(obj):
@@ -264,6 +283,9 @@ class WebIntelligenceMonitor:
         
         # Step 8: Save report
         report_path = self.save_report(report_text)
+
+        # Step 9: Save SQLite results
+        database_path = self.save_sqlite_results(metrics_list, analysis, analysis_path, report_path)
         
         logger.info("=" * 80)
         logger.info("Pipeline Complete!")
@@ -273,6 +295,7 @@ class WebIntelligenceMonitor:
             "raw_measurements": csv_path,
             "analysis": analysis_path,
             "report": report_path,
+            "database": database_path,
             "session_count": len(sessions),
             "success_count": sum(1 for s in sessions if s.metrics.is_success)
         }
@@ -293,6 +316,7 @@ async def main():
             print(f"  Raw data: {results['raw_measurements']}")
             print(f"  Analysis: {results['analysis']}")
             print(f"  Report: {results['report']}")
+            print(f"  Database: {results['database']}")
     
     except Exception as e:
         logger.error(f"Pipeline failed: {e}", exc_info=True)

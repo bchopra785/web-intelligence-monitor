@@ -26,6 +26,8 @@ web-intelligence-monitor/
 │   ├── websites.json            # Predefined website dataset
 │   ├── raw/                     # Raw measurements (CSV/JSON)
 │   └── processed/               # Analysis results and reports
+├── storage/                 # SQLite persistence and SQL queries
+│   └── sqlite_store.py          # Run history and summary storage
 ├── analysis/                # Data analysis and scoring
 │   ├── metrics.py              # Performance scoring algorithms
 │   └── statistics.py           # Statistical aggregation
@@ -65,7 +67,8 @@ This executes the complete workflow:
 3. Saves raw measurements to CSV
 4. Analyzes data and computes scores
 5. Generates automated text report
-6. Outputs results to `data/processed/`
+6. Persists run history and summaries to SQLite
+7. Outputs results to `data/processed/`
 
 For the GitHub portfolio version, one polished sample report is kept here:
 
@@ -89,8 +92,31 @@ After running, check:
 - **Raw measurements**: `data/raw/raw_measurements_YYYYMMDD_HHMMSS.csv`
 - **Analysis results**: `data/processed/analysis_YYYYMMDD_HHMMSS.json`
 - **Report**: `data/processed/report_YYYYMMDD_HHMMSS.txt` (also printed to console)
+- **SQLite database**: `data/processed/web_intelligence_monitor.db`
 
 Note: `data/raw/` and `data/processed/` are generated outputs and are ignored by Git. The repo keeps one curated example report in `examples/sample_report.txt` for reviewers.
+
+## SQL Persistence
+
+The project now uses SQLite to store each pipeline run, the per-site measurements, and category-level summaries.
+
+### What gets saved
+
+- Run metadata: timestamp, success count, failure count, and load-time summary stats
+- Per-website measurements: timings, HTTP status, error type, and flags
+- Category summaries: success rate, mean load time, percentiles, and variance
+
+### Why this helps your resume
+
+- Shows practical SQL usage through SQLite schema design and inserts
+- Demonstrates relational modeling for repeated runs and analytics
+- Gives you a database-backed history of measurements instead of only flat files
+
+### Example queries supported by the project
+
+- Top performers by average load time and success rate
+- Most recent run summary
+- Category-level performance breakdowns
 
 ## Collected Metrics
 
@@ -318,4 +344,4 @@ This is a portfolio project. Feel free to use, modify, and build upon it.
 
 ## Questions?
 
-For project details, see the source code comments and docstrings. The codebase is designed to be readable and well-documented for portfolio review.
+For project details, see the source code comments and docstrings.
